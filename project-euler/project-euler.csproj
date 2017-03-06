@@ -35,9 +35,19 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Problem1.cs" />
-    <Compile Include="IProblem.cs" />
-    <Compile Include="Problem2.cs" />
+    <Compile Include="Problem\IProblem.cs" />
+    <Compile Include="Problem\Problem1.cs" />
+    <Compile Include="Problem\Problem2.cs" />
+    <Compile Include="Problem\Problem3.cs" />
+    <Compile Include="Matematica\Sequence\Fibo\Fibo.cs" />
+    <Compile Include="Matematica\Sequence\Fibo\IFibo.cs" />
+    <Compile Include="Matematica\Sequence\ISequence.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Problem\" />
+    <Folder Include="Matematica\" />
+    <Folder Include="Matematica\Sequence\" />
+    <Folder Include="Matematica\Sequence\Fibo\" />
+  </ItemGroup>
 </Project>

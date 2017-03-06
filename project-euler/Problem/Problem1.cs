@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace projecteuler
+namespace Projecteuler.Problem
 {
 	/**
 	 * 	If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these
@@ -11,10 +10,10 @@ namespace projecteuler
 	 */
 	public class Problem1: IProblem
 	{
-		public int solution()
+		public int Solution()
 		{
 			int solution = 0;
-			IEnumerable<int> sequence = numberSequence ();
+			IEnumerable<int> sequence = NumberSequence ();
 			foreach (int number in sequence) 
 			{
 				solution += number;
@@ -24,7 +23,7 @@ namespace projecteuler
 			return solution;
 		}
 
-		private IEnumerable<int> numberSequence(){
+		private IEnumerable<int> NumberSequence(){
 			for (int i = 0; i < 1000; i++) {
 				if (0 == i % 3 || 0 == i % 5) {
 					yield return i;
@@ -32,9 +31,9 @@ namespace projecteuler
 			}
 		}
 
-		public bool isOk()
+		public bool IsOk()
 		{
-			return solution () == 233168;
+			return Solution () == 233168;
 		}
 	}
 }
